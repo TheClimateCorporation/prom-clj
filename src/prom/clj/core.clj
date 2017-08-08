@@ -1,8 +1,8 @@
-(ns prom.clj.prometheus
-  (:require
+(ns prom.clj.core
+    (:require
     [clojure.string :as s]
     [clojure.tools.logging :as log])
-  (:import
+    (:import
     [io.prometheus.client.exporter.common TextFormat]
     [io.prometheus.client Counter
                           Gauge

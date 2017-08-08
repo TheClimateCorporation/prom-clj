@@ -1,11 +1,11 @@
-(ns prom.clj.test.prometheus
-  "Unit tests for prometheus metrics."
-  (:require
+(ns prom.clj.test.core
+    "Unit tests for prometheus metrics."
+    (:require
     [clojure.tools.logging :as log]
     [clojure.test :refer :all]
-    [prom.clj.prometheus :as prometheus]
+    [prom.clj.core :as prometheus]
     [midje.sweet :refer :all])
-  (:import
+    (:import
     [io.prometheus.client Counter]))
 
 
