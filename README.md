@@ -143,7 +143,7 @@ Since metrics errors are not service-critical for your project, errors from this
 
 Prometheus is a pull-based monitoring system configured to scrape the `/metrics` endpoint of a service. In order to point
 Prometheus to the correct registry, please configure your service so that the `/metrics` route returns a call to 
-`(fdi-metrics/metricz)`.
+`(prom-clj/metricz)`.
 
 ## Accessing Your Custom Metrics
 
