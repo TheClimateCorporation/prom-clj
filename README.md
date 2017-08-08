@@ -1,4 +1,4 @@
-# menoetius-clj
+# prom-clj
 
 This library is intended to provide a developer-friendly Clojure wrapper for Prometheus custom metrics.
 

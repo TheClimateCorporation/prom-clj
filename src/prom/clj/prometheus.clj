@@ -1,4 +1,4 @@
-(ns menoetius.clj.prometheus
+(ns prom.clj.prometheus
   (:require
     [clojure.string :as s]
     [clojure.tools.logging :as log])
