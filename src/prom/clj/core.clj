@@ -105,7 +105,7 @@
 (defn increment-counter
   "Increments the counter identified by label and returns the result of expr, or true if no expr is provided."
   ([label help-string]
-   (increment-counter true label help-string))
+   (increment-counter label help-string true))
   ([label help-string expr]
    (try
      (let [metric (inspect-create create-counter label help-string)]
@@ -118,7 +118,7 @@
 (defn increment-gauge
   "Increments the gauge identified by label and returns the result of expr, or true if no expr is provided."
   ([label help-string]
-   (increment-gauge true label help-string))
+   (increment-gauge label help-string true))
   ([label help-string expr]
    (try
      (let [metric (inspect-create create-gauge label help-string)]
@@ -131,7 +131,7 @@
 (defn decrement-gauge
   "Decrements the gauge identified by label and returns the result of expr, or true if no expr is provided."
   ([label help-string]
-   (decrement-gauge true label help-string))
+   (decrement-gauge label help-string true))
   ([label help-string expr]
    (try
      (let [metric (inspect-create create-gauge label help-string)]

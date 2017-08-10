@@ -29,7 +29,8 @@
              (let [counter :valid_counter
                    expr (* 3 8)]
                (prometheus/increment-counter counter "This is a valid counter." expr)
-               (prometheus/get-value counter) => 1.0
+               (prometheus/increment-counter counter "This is a valid counter.")
+               (prometheus/get-value counter) => 2.0
                (prometheus/set-gauge counter "Can not set a counter." expr) => 24))
 
        (fact "Timer operates as expected."
@@ -53,6 +54,9 @@
                (prometheus/set-gauge label "This is a test gauge." 10)
                (prometheus/get-value label) => 10.0
                (prometheus/set-gauge label "This is a test gauge." expr)
+               (prometheus/get-value label) => 24.0
+               (prometheus/increment-gauge label "This is a test gauge.")
+               (prometheus/decrement-gauge label "This is a test gauge.")
                (prometheus/get-value label) => 24.0))
 
        (fact "current-metrics behaves as desired."
